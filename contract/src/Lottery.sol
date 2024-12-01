@@ -1,13 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "./IConduitVRFCoordinator.sol";
-import "./IConduitVRFConsumer.sol";
+import "./interfaces/IConduitVRFCoordinator.sol";
+import "./interfaces/IConduitVRFConsumer.sol";
 import "./ConduitVRFConsumerBase.sol";
 
 contract Lottery is ConduitVRFConsumerBase {
     IConduitVRFCoordinator public vrf;
-    // Change to uint16 to store larger numbers (0-9999)
     mapping(uint256 => uint16) public lotteryNumbers;
 
     constructor(address _vrf) {
@@ -35,22 +34,4 @@ contract Lottery is ConduitVRFConsumerBase {
     }
 
     receive() external payable {}
-
-    // Add this function to get formatted number
-    function getFormattedNumber(uint256 _id) public view returns (string memory) {
-        uint16 number = lotteryNumbers[_id];
-        require(number < 10000, "Invalid number");
-        
-        // Convert to string with leading zeros
-        string memory str = new string(4);
-        bytes memory bstr = bytes(str);
-        
-        for(uint i = 3; i >= 0; i--) {
-            bstr[i] = bytes1(uint8(48 + number % 10));
-            number /= 10;
-            if(i == 0) break;
-        }
-        
-        return string(bstr);
-    }
 } 
