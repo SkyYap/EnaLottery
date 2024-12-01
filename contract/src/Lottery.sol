@@ -1,10 +1,11 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
 import "./IConduitVRFCoordinator.sol";
 import "./IConduitVRFConsumer.sol";
 import "./ConduitVRFConsumerBase.sol";
 
-contract DieRoller is ConduitVRFConsumerBase {
+contract Lottery is ConduitVRFConsumerBase {
     IConduitVRFCoordinator public vrf;
     // Change to uint16 to store larger numbers (0-9999)
     mapping(uint256 => uint16) public lotteryNumbers;
