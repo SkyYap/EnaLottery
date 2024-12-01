@@ -6,14 +6,14 @@ interface LotteryCardProps {
   onEnterLottery: () => void;
   potSize: string;
   timeLeft: string;
-  entries: number;
+  wallets: number;
 }
 
 export const LotteryCard: React.FC<LotteryCardProps> = ({
   onEnterLottery,
   potSize,
   timeLeft,
-  entries,
+  wallets,
 }) => {
   return (
     <motion.div
@@ -30,7 +30,7 @@ export const LotteryCard: React.FC<LotteryCardProps> = ({
           <Trophy className="w-16 h-16 text-yellow-500 mb-4" />
         </motion.div>
         <h1 className="text-3xl font-bold text-gray-800 mb-2">Current Pot</h1>
-        <p className="text-5xl font-bold text-purple-600">{potSize} ETH</p>
+        <p className="text-5xl font-bold text-purple-600">{potSize} USDe</p>
       </div>
 
       <div className="space-y-4 mb-8">
@@ -47,7 +47,7 @@ export const LotteryCard: React.FC<LotteryCardProps> = ({
             <Users className="w-6 h-6 text-purple-600" />
             <span className="text-gray-600">Total Entries</span>
           </div>
-          <span className="font-semibold text-gray-800">{entries}</span>
+          <span className="font-semibold text-gray-800">{wallets}</span>
         </div>
       </div>
 

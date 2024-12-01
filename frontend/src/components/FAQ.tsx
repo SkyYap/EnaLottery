@@ -50,27 +50,27 @@ export const FAQ: React.FC = () => {
   const faqData = [
     {
       question: "What makes this lottery special?",
-      answer: "Unlike traditional lotteries, ours runs entirely on the Ethereum blockchain, making it completely transparent and trustless. Every aspect - from number selection to winner determination - can be verified by anyone, ensuring absolute fairness."
+      answer: "EnaLottery is the first no-loss lottery on Ethena, combining the excitement of traditional lotteries with the security of decentralized finance. Your entry fee isn’t spent—it’s pooled to generate yield, ensuring the prize pool grows sustainably while your initial deposit remains intact."
     },
     {
       question: "How do I participate?",
-      answer: "It's simple! Just connect your MetaMask wallet, click 'Enter Lottery', and choose your lucky number between 0000 and 9999. The entry fee is 0.01 ETH, which goes directly into the prize pool."
+      answer: "It's simple! Just connect your MetaMask wallet, click 'Enter Lottery', and choose your lucky number between 0000 and 9999. The entry fee is 1 USDe, which goes directly into the prize pool."
     },
     {
       question: "How is the winning number drawn?",
-      answer: "We use Chainlink's Verifiable Random Function (VRF) - the gold standard for blockchain randomness. This cryptographic system ensures that nobody, not even us, can manipulate the winning number selection."
+      answer: "The winning number is drawn using ConduitVRF, a secure and transparent random number generator. This ensures that the process is completely fair and tamper-proof."
     },
     {
       question: "When do I get my winnings?",
-      answer: "Instantly! If your number matches the winning draw, our smart contract automatically transfers the entire prize pool to your wallet. No forms to fill, no waiting periods - just instant payouts."
+      answer: "If you win, your rewards will be distributed immediately after the draw ends. You can choose to redeem your winnings in USDe or our token as the payout (we will incentivize you if you choose our token)"
     },
     {
       question: "What happens to my entry fee?",
-      answer: "95% of every entry fee goes straight into the prize pool. The remaining 5% covers gas fees and platform maintenance to keep the lottery running smoothly and securely."
+      answer: "Your entry fee of 1 USDe per entry is not spent. Instead, it is pooled into yield-generating DeFi protocols. These earnings fund the prize pool, while your initial deposit remains untouched and can be withdrawn after the lottery ends."
     },
     {
       question: "Can I enter multiple times?",
-      answer: "Yes! You can enter as many times as you'd like with different numbers. Each entry requires a separate 0.01 ETH fee and increases your chances of winning."
+      answer: "Yes, you can enter multiple times! Each entry costs 1 USDe, and you can place up to 1,000,000 entries on a single number to maximize your chances of winning."
     }
   ];
 

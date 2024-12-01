@@ -9,9 +9,9 @@ import { Profile } from './components/Profile';
 
 const Home = () => {
   const navigate = useNavigate();
-  const [potSize, setPotSize] = useState('1.5');
+  const [potSize, setPotSize] = useState('156');
   const [timeLeft, setTimeLeft] = useState('23:59:59');
-  const [entries, setEntries] = useState(156);
+  const [wallets, setWallets] = useState(156);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -67,7 +67,7 @@ const Home = () => {
           onEnterLottery={handleEnterLottery}
           potSize={potSize}
           timeLeft={timeLeft}
-          entries={entries}
+          wallets={wallets}
         />
 
         <motion.div
@@ -80,16 +80,16 @@ const Home = () => {
             <span>
               Powered by{' '}
               <a 
-                href="https://drand.love" 
+                href="https://www.conduit.xyz/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="underline hover:opacity-80 transition-colors"
               >
-                Open Source VRF Drand
+                Conduit VRF
               </a>
             </span>
             <a 
-              href="https://drand.love/docs/overview/"
+              href="https://docs.chain.link/vrf"
               target="_blank" 
               rel="noopener noreferrer"
               className="text-purple-200 hover:text-white transition-colors"

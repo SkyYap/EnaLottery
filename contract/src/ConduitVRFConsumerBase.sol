@@ -2,15 +2,23 @@
 pragma solidity ^0.8.19;
 
 abstract contract ConduitVRFConsumerBase {
-    uint256 constant GENESIS = 1692803367;
-    uint256 constant ROUND_DURATION = 3;
+    uint256 public roundStartTime;
+    uint256 public roundDuration;
+
+    event RoundConfigUpdated(uint256 startTime, uint256 duration);
+
+    constructor(uint256 _startTime, uint256 _roundDuration) {
+        roundStartTime = _startTime;
+        roundDuration = _roundDuration;
+    }
 
     /// @notice Returns the address of the dedicated msg.sender.
     /// @return Address of the ConduitVRFCoordinator.
     function _conduitVrf() internal view virtual returns (address);
 
     function _calculateRound() internal view returns (uint256) {
-        return ((block.timestamp - GENESIS) / ROUND_DURATION) + 2;
+        require(block.timestamp >= roundStartTime, "Round not started");
+        return ((block.timestamp - roundStartTime) / roundDuration) + 1;
     }
 
     function _fulfillRandomness(
