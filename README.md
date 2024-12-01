@@ -1,6 +1,6 @@
 # Decentralized Lottery dApp
 
-the first No-Loss, fully decentralized lottery application on Ethena Network powered by Conduit VRF for verifiable randomness.
+The first No-Loss, fully decentralized lottery application on Ethena Network powered by Conduit VRF for verifiable randomness.
 
 [![Watch the video](https://github.com/user-attachments/assets/c3106b56-f27f-426e-8efb-ef53e4bb2c9c)](https://youtu.be/D66BpU6gGSQ)
 
